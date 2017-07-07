@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"/>
+<script src="js/app.js" type="text/javascript"/>
+<body ng-app="myApp">
+<div class="main">
+    <h1>Login</h1>
+    <div class="form">
+        <label>Username:</label>
+
+        <div class="username_input">
+            <input type="text" id="inputUsername" name="username" placeholder="username"/>
+        </div>
+    </div>
+
+    <div class="form">
+        <label>Password:</label>
+
+        <div class="password_input">
+            <input type="text" id="inputPassword" name="password" placeholder="password"/>
+        </div>
+    </div>
+    <div class="form">
+        <button class="btn btn-default" type="submit">Login</button>
+    </div>
+</div>
+</body>
+</html>
