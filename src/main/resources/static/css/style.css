@@ -8,3 +8,8 @@ div.form {
     height: 200px;
     padding: 10px;
 }
+
+.main_container {
+    border: 4px solid black;
+
+}

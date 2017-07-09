@@ -2,10 +2,35 @@
 <html lang="en">
 <head>
     <title>MySite</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
 </head>
-<body>
-<div class="main_container">
+<body ng-app="myApp">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/service/ArticlesService.js"></script>
+<script src="js/controller/ArticlesController.js"></script>
+<div class="main_container" ng-controller="ArticlesController as ctrl">
     <h1>My site</h1>
+
+    <div class="tableDiv">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>title</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="a in ctrl.articles">
+                <td><span ng-bind="a.id"></span></td>
+                <td><span ng-bind="a.username"></span></td>
+                <td><span ng-bind="a.title"></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p ng-bind="ctrl.articles"></p>
 </div>
 </body>
 </html>
